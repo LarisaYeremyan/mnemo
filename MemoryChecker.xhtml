@@ -1,0 +1,63 @@
+<!DOCTYPE HTML [
+    <!ENTITY title 'Memory Checker'>
+]>
+<html xmlns='http://www.w3.org/1999/xhtml'>
+<head>
+    <link rel='stylesheet' href='content/style/memoryChecker.css' />
+    <link rel='icon' href='content/Imgs/icon.ico' type='image/png'></link>  
+
+    <link rel='stylesheet' type='text/css' href='content/style/memoryChecker.css' />
+    <script src='Content/Scripts/JQuery/jquery-3.1.0.min.js'></script>
+    <script src='Content/Scripts/memoryChecker.js'></script>
+    <title>&title;</title>
+</head>
+
+<body>
+    <div id='game_container'> 
+        <div id='game_options'> 
+            <button type='button' class='new_game' onclick='createGame(true);'>New Game</button>
+            <label>Size</label>
+            <select id='size'>
+                <option value='4'>4x4</option>
+                <option value='6' selected='selected'>6x6</option>
+                <option value='8'>8x8</option>
+                <option value='10'>8x10</option>
+                <option value='12'>8x12</option>
+                <option value='14'>8x14</option> 
+            </select>
+
+            <label>Images</label>
+            <select id='image_type'>
+                <option value='symbols'>Symbol</option>
+                <option value='brands'>Brand Logo</option>
+                <option value='cars'>Car Logo</option>
+                <option value='flags'>Flag</option>
+                <option value='fruitsVegetables'>Fruit And Vegetable</option>
+                <option value='animals'>Animal</option> 
+                <option value='flowers'>Flower</option>                 
+            </select>
+
+            <button type='button' class='preview' onclick='createGame(false);'>Preview Game</button>
+
+            <span id='game_timer'>00:00:00</span>
+
+        </div> 
+        <div id='container'>
+        </div>
+        <div class='hand'>
+            <div class='thumb'></div>
+            <div class='finger'></div>
+            <div class='finger'></div>
+            <div class='finger'></div>
+            <div class='finger'></div>
+        </div> 
+
+      <div class='win'>
+        <span class='zoom'>
+          <span>Y</span><span>O</span><span>U</span> <span>W</span><span>I</span><span>N</span><span>!</span>
+        </span>
+      </div>
+
+    </div>
+</body>
+</html>
